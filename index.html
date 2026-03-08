@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUW - Премиум Ресторан</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>🍽️ GUW</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Басты бет</a></li>
+                <li><a href="#about" class="nav-link">Туралы</a></li>
+                <li><a href="#menu" class="nav-link">Мәзір</a></li>
+                <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="#contact" class="nav-link">Контактілер</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>GUW-ге қош келдіңіз</h2>
+            <p>Сіздің үстеліңіз үшін ең жақсы таңдау</p>
+            <button class="btn btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Мәзірді қарау</button>
+        </div>
+    </section>
+
+    <!-- О ресторане -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Ресторан туралы</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="aboutText">GUW-ге қош келдіңіз! Біздің ресторан жергілік және халықаралық тағамдардың ең жақсы дәмдерін ұсынады. Біз тек сапалы ингредиенттер пайдаланып, құрметті қонақтарымыз үшін махаббатпен пісіреміз. Біздің рестораны сіздерге жайлылықпен махаббатты сыйлайды.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Нарықтағы жылы</p>
+                    </div>
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Қонақтар</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Мәзірдегі тағамдар</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Біздің Мәзір</h2>
+            <div class="menu-filters">
+                <button class="filter-btn active" onclick="filterMenu('all')">Барлығы</button>
+                <button class="filter-btn" onclick="filterMenu('hot')">Ыстық</button>
+                <button class="filter-btn" onclick="filterMenu('salad')">Салаттар</button>
+                <button class="filter-btn" onclick="filterMenu('drink')">Сусындар</button>
+            </div>
+            <div id="menuList" class="menu-grid">
+                <!-- Меню загружается через JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Фотогалерея</h2>
+            <div id="galleryGrid" class="gallery-grid">
+                <!-- Галерея загружается через JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Бізге хабарласыңыз</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📞 Телефон</h3>
+                        <p id="contactPhone">+7 (702)512 44 53 </p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Мекенжайы</h3>
+                        <p id="contactAddress">Астана қаласы., Қазыбек би 21, </p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>⏰ Жұмыс уақыты</h3>
+                        <p id="contactHours">Дс-Сб: 10:00 - 23:00<br>Жс: 12:00 - 22:00</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Хабар қалдырыңыз</h3>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Сіздің атыңыз" required>
+                        <input type="email" name="email" placeholder="Сіздің электронды поштаңыз" required>
+                        <textarea name="message" placeholder="Сіздің хабарламасы" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Жіберу</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 GUW. Барлығы сіздер үшін.</p>
+            <p>❤️ махаббатпен</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
